@@ -1,0 +1,23 @@
+server:
+   port: 8091
+spring:
+  application:    name: job-detail-service
+  datasource:
+    url: jdbc:oracle:thin:@DESKTOP-C4G4QQ6:1521/XEPDB1
+    username: springuser
+    password: springuser
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  
+    properties:
+      hibernate.format_sql: true
+      hibernate.dialect: org.hibernate.dialect.Oracle10gDialect
+eureka:
+   client:
+      register-with-eureka: true
+      fetch-registry: true
+      serviceUrl:
+          defaultZone: http://localhost:8761/eureka
+                      
