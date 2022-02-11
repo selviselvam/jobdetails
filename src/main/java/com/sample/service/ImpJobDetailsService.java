@@ -17,4 +17,12 @@ public class ImpJobDetailsService implements IJobDetailsService {
 			Integer iInteger = Integer.valueOf(jobDetailId);
 			return iInteger;
 		}
+
+		@Override
+		public JobDetails findByJobDetailId(int jobDetailId) {
+			JobDetails jobDetails = jobDetailsRepository.findByJobDetailId(jobDetailId);
+			return jobDetails;
+		}
+		
+		
 }
